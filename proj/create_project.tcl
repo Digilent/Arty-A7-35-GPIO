@@ -2,7 +2,7 @@
 # If ::create_path global variable is set, the project is created under that path instead of the working dir
 
 # Project specific settings. These must be updated for each project.
-set proj_name "TEMPLATE"
+set proj_name "bsd"
 
 if {[info exists ::create_path]} {
 	set dest_dir $::create_path
@@ -121,8 +121,8 @@ puts "INFO: Project created:$proj_name"
 
 # Uncomment this block if importing an existing block diagram project
 # Import block design if it exists
-set my_list [glob -nocomplain $src_dir/bd/*/*.bd]
-if {[llength $my_list] != 0} {
+set bd_list [glob -nocomplain $src_dir/bd/*/*.bd]
+if {[llength $bd_list] != 0} {
   add_files -norecurse -quiet -fileset sources_1 [glob -nocomplain $src_dir/bd/*/*.bd]
   open_bd_design [glob -nocomplain $src_dir/bd/*/*.bd]
   set design_name [get_bd_designs]
@@ -142,6 +142,14 @@ if {[llength $my_list] != 0} {
 }
 
 set sdk_dir $origin_dir/sdk
+
+set hw_list [glob -nocomplain $sdk_dir/*hw_platform*]
+if {[llength $hw_list] != 0} {
+  foreach hw_plat $hw_list {
+	file delete -force $hw_plat
+  }
+}
+
 set sdk_list [glob -nocomplain $sdk_dir/*]
 set sdk_list [lsearch -inline -all -not -exact $sdk_list "../sdk/.keep"]
 if {[llength $sdk_list] != 0} {
