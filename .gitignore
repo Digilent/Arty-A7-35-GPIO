@@ -19,6 +19,8 @@ sdk/**/*RemoteSystemsTempFiles
 sdk/**/*Debug/*
 sdk/**/*Release
 sdk/**/*webtalk
+sdk/.sdk
+sdk/*.log
 
 # ignore everything in the hw_platform
 sdk/*hw_platform*/*
