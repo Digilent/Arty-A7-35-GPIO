@@ -10,14 +10,14 @@ To use the USB-UART bridge feature of this demo, the Arty A7-35T must be connect
 Requirements
 --------------
 * **Arty A7-35T**:To purchase a Arty A7-35T, see the [Digilent Store](https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/)
-* **Vivado 2018.2 Installation**:To set up Vivado, see the [Installing Vivado and Digilent Board Files Tutorial](https://reference.digilentinc.com/vivado/installing-vivado/start).
+* **Vivado 2020.1 Installation**:To set up Vivado, see the [Installing Vivado and Digilent Board Files Tutorial](https://reference.digilentinc.com/vivado/installing-vivado/start).
 * **Serial Terminal Emulator Application**: For more information see the [Installing and Using a Terminal Emulator Tutorial](https://reference.digilentinc.com/learn/programmable-logic/tutorials/tera-term).
 * **MicroUSB Cable**
  
 Demo Setup
 --------------
 1. Download and extract the most recent release ZIP archive from this repository's [Releases Page](https://github.com/Digilent/Arty-A7-35-GPIO/releases).
-2. Open the project in Vivado 2018.2 by double clicking on the included XPR file found at "\<archive extracted location\>/vivado_proj/Arty-A7-35-GPIO.xpr".
+2. Open the project in Vivado 2020.1 by double clicking on the included XPR file found at "\<archive extracted location\>/vivado_proj/Arty-A7-35-GPIO.xpr".
 3. In the Flow Navigator panel on the left side of the Vivado window, click **Open Hardware Manager**.
 4. Plug the Arty A7-35T into the computer using a MicroUSB cable.
 5. Open a serial terminal emulator (such as TeraTerm) and connect it to the Arty A7-35T's serial port, using a baud rate of 9600.
